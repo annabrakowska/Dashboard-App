@@ -1,0 +1,35 @@
+<div class="ui three column centered grid">
+  <form class="ui form">
+    <div class="field">
+    <label>Teacher Information</label>
+    <%= form_for @teacher do |form| %>
+    <%= form.text_field :first_name, value:"First name: "+ @teacher.first_name %>
+    </div>
+    <div class="field">
+    <%= form.text_field :last_name, value:"Last name: " + @teacher.last_name %>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :age, value:"Age: " + @teacher.age.to_s %>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :salary, value:"Salary: $" + @teacher.salary.to_s%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :education, value:"Education: " + @teacher.education%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :email, value:"Email: " + @teacher.email%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :password, value:"Password: " + @teacher.password%>
+    </div>
+    <%=link_to "Edit", edit_teacher_path(@teacher), :class=> "ui inverted button"%>
+    <%end%>
+  </div>
+  </div>
+</div>

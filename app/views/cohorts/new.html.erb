@@ -1,0 +1,32 @@
+<div class="ui three column centered grid">
+  <form class="ui form">
+    <div class="field">
+    <label>New Cohort Form</label>
+      <%= form_with model: Cohort.new do |form| %>
+    </div>
+    
+    <div class="field">
+    <%= form.text_field :name, placeholder: "Name"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :start_date, placeholder: "Start Date"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :end_date, placeholder: "End Date"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :course_id, placeholder: "Course ID"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :teacher_id, placeholder: "Teacher ID"%>
+    </div>
+
+    <%= form.submit class:"ui inverted button" %>
+  <% end %>
+    </div>
+  </div>
+</div>

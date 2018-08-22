@@ -1,0 +1,39 @@
+<div class="ui three column centered grid">
+  <div class="ui form">
+    <div class="field">
+    <label>New Teacher Form</label>
+      <%= form_with model: Teacher.new do |form| %>
+      <%= form.text_field :first_name, placeholder: "Enter First Name"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :last_name, placeholder: "Enter Last Name"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :age, placeholder: "Enter Age"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :salary, placeholder: "Enter Salary"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :education, placeholder: "Education"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :email, placeholder: "Email"%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :password, placeholder: "Password"%>
+    </div>
+
+    <%= form.submit class: "ui inverted button"%>
+  <% end %>
+  </div>
+  </div>
+  </div>
+</div>
+

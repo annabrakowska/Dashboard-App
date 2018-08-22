@@ -1,0 +1,34 @@
+<div class="ui three column centered grid">
+    <div class="ui form">
+    <div class="field">
+    <label>Edit Information Form</label>
+    <%= form_with model: @student  do |form| %>
+    
+    <%= form.text_field :first_name, placeholder:"First name: "+ @student.first_name %>
+    </div>
+    <div class="field">
+    <%= form.text_field :last_name, placeholder:"Last name: " + @student.last_name %>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :age, placeholder:"Age: " + @student.age.to_s %>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :email, placeholder:"Email: " + @student.email%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :password, placeholder:"Password: " + @student.password%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :cohort_id, placeholder:"Cohort ID: " + @student.cohort_id.to_s%>
+    </div>
+    
+    <%= form.submit "Save" %>
+    <%end%>
+  </div>
+  </div>
+  </div>
+</div>

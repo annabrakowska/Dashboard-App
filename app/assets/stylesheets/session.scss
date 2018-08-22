@@ -1,0 +1,17 @@
+// Place all the styles related to the Session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  height: 100vh;
+  background: linear-gradient(#000066 24%, #9966ff 100%);
+  background-repeat: no-repeat;
+  .ui.form {
+    background: rgba(232, 232, 232, 0.4);
+    position: relative;
+    top: 25vh;
+    padding: 3.5vh;
+    width: 50vh;
+    border-radius: 5%;
+    box-shadow: 1px 1px 2px 1px rgba(97, 96, 96, 0.178);
+  }
+}
