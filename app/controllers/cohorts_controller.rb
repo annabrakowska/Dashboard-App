@@ -1,11 +1,11 @@
 class CohortsController < ApplicationController
     
     def index
-        @cohort = Cohort.all
+        @cohorts = Cohort.all
     end
 
     def new 
-        @cohort = cohort.new
+        @cohort = Cohort.new
     end
 
     def create

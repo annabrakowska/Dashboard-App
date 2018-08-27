@@ -5,11 +5,36 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style= "background: #dadaff">
+  <div class="ui sidebar inverted vertical menu" style="background:#09093B">
+<a class="item">
+<img class="ui medium circular image" src="https://www.shareicon.net/data/2016/05/26/771202_people_512x512.png">
+</a>
+<a href="/admins" class="item">
+  Dashboard <i class="home icon"></i>
+</a>
+<a href="/teachers" class="item">
+  Teachers <i class="id badge  icon"></i>
+</a>
+<a href="/courses"  class="item">
+  Courses <i class="book icon"></i>
+</a>
+<a href="/cohorts" class="item">
+  Cohorts <i class="address book outline icon"></i>
+</a>
+<a href="/students" class="item">
+
+  Students <i class="users icon"></i>
+</a>
+</div>
+<div class="pusher">
+<div class="ui top fixed menu"><p>New York Code + Design Academy Dashboard</p></div>
+
+</div>
     <%= yield %>
   </body>
 </html>

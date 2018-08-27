@@ -1,7 +1,8 @@
 <div class="ui three column centered grid">
   <div class="ui form">
+  <div class="ui top attached label">New Teacher Form</div>
+  <br><br><br>
     <div class="field">
-    <label>New Teacher Form</label>
       <%= form_with model: Teacher.new do |form| %>
       <%= form.text_field :first_name, placeholder: "Enter First Name"%>
     </div>
@@ -30,7 +31,7 @@
     <%= form.text_field :password, placeholder: "Password"%>
     </div>
 
-    <%= form.submit class: "ui inverted button"%>
+    <%= form.submit class: "ui inverted orange button"%>
   <% end %>
   </div>
   </div>

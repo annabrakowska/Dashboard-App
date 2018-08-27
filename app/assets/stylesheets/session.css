@@ -1,14 +1,43 @@
 body {
   height: 100vh;
-  background: linear-gradient(#000066 24%, #9966ff 100%);
-  background-repeat: no-repeat; }
-  body .ui.form {
-    background: rgba(232, 232, 232, 0.4);
-    position: relative;
-    top: 25vh;
-    padding: 3.5vh;
-    width: 50vh;
-    border-radius: 5%;
-    box-shadow: 1px 1px 2px 1px rgba(97, 96, 96, 0.178); }
+  background-repeat: no-repeat;
+  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%); }
+
+.ui.form {
+  background: white;
+  position: relative;
+  top: 190px;
+  padding: 3.5vh;
+  width: 50%;
+  border-radius: 5%;
+  box-shadow: 1px 1px 2px 1px rgba(97, 96, 96, 0.178); }
+
+.ui.menu {
+  visibility: visible;
+  background: #09093b; }
+
+.ui.table {
+  position: relative;
+  top: 15vh;
+  left: 15rem;
+  margin: 0;
+  width: 90rem; }
+
+.ui.top.attached {
+  background: #09093b;
+  font-size: 150%;
+  color: white; }
+
+.ui.top.fixed.menu {
+  background: transparent;
+  height: 15vh;
+  color: #09093b;
+  text-align: center; }
+  .ui.top.fixed.menu p {
+    text-align: center;
+    margin-left: 15.5%;
+    margin-top: 3.7%;
+    text-shadow: 1px 2.3px gray;
+    font-size: 260%; }
 
 /*# sourceMappingURL=session.css.map */

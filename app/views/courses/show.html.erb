@@ -1,0 +1,24 @@
+<div class="ui three column centered grid">
+  <form class="ui form">
+    <div class="field">
+
+    <div class="ui top attached label">Course Information</div>
+    <br><br>
+   
+    <%= form_for @course do |form| %>
+    <%= form.text_field :name, value:"Name: "+ @course.name %>
+    </div>
+    <div class="field">
+    <%= form.text_field :hours, value:"Hours: " + @course.hours.to_s %>
+    </div>
+    <%=link_to "Edit", edit_course_path(@course), :class=> "ui inverted orange button"%>
+    <%end%>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<table class="ui compact celled definition table">
+  <thead class="full-width">
+    <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Course ID</th>
+    <th>Teacher ID</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @cohorts.each do |cohort| %> 
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox"> 
+          <input type="checkbox"><label></label>
+        </div>
+      </td>
+      <td><%=link_to cohort.name, cohort_path(cohort)%></td>
+      <td><%=cohort.start_date.to_s%></td>
+      <td><%=cohort.end_date.to_s%></td>
+      <td><%=cohort.course_id.to_s%></td>
+      <td><%=cohort.teacher_id.to_s%></td>
+    </tr>
+    <% end%>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th></th>
+      <th colspan="5">
+          <%=link_to "Add cohort", new_cohort_path(@cohort), :class=> "ui inverted orange button"%>
+        </div>  
+      </th>
+    </tr>
+  </tfoot>
+</table>
+

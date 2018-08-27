@@ -10,8 +10,11 @@
     </head>
 
     <body>
+    
       <div class="ui three column centered grid">
         <form class="ui form">
+        <div class="ui top attached label">Login To Dashboard</div>
+        <br><br>
         <div class="field">
         <label>Name</label>
           <input type="text" name="name" placeholder="Name...">
@@ -20,9 +23,12 @@
         <label>Password</label>
         <input type="password" name="password" placeholder="Password...">
         </div>
-        <button class="ui inverted button" type="submit">Submit</button>
+          <button class="ui inverted orange button" type="submit">Login</button>
       </form>
       </div>
+
+
+      
     <%= yield %>
   </body>
 </html>

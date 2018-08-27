@@ -1,0 +1,17 @@
+<div class="ui three column centered grid">
+    <div class="ui form">
+    <div class="field">
+    <div class="ui top attached label">Course Information</div>
+    <br><br>
+    <%= form_with model: @course  do |form| %>
+    <%= form.text_field :name, placeholder:"Name: " + @course.name %>
+    </div>
+    <div class="field">
+    <%= form.text_field :hours, placeholder:"Hours: " + @course.hours.to_s %>
+    </div>
+    <%= form.submit "Save", class:"ui inverted orange button" %>
+    <%end%>
+  </div>
+  </div>
+  </div>
+</div>

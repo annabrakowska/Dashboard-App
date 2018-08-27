@@ -1,7 +1,8 @@
 <div class="ui three column centered grid">
-  <form class="ui form">
+  <div class="ui form">
     <div class="field">
-      <label>New Cohort Form</label>
+    <div class="ui top attached label">New Course Information</div>
+    <br><br>
       <%= form_with model: Course.new do |form| %>
     </div>
     
@@ -14,7 +15,7 @@
     </div>
     
     <div class="field">
-      <%= form.submit class: "ui inverted button"%>
+      <%= form.submit :class=> "ui inverted orange button"%>
     </div>  
       <% end %>
     </div>

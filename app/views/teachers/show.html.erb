@@ -1,7 +1,8 @@
 <div class="ui three column centered grid">
   <form class="ui form">
     <div class="field">
-    <label>Teacher Information</label>
+    <div class="ui top attached label">Teacher Information</div>
+    <br><br>
     <%= form_for @teacher do |form| %>
     <%= form.text_field :first_name, value:"First name: "+ @teacher.first_name %>
     </div>
@@ -28,7 +29,7 @@
     <div class="field">
     <%= form.text_field :password, value:"Password: " + @teacher.password%>
     </div>
-    <%=link_to "Edit", edit_teacher_path(@teacher), :class=> "ui inverted button"%>
+    <%=link_to "Edit", edit_teacher_path(@teacher), :class=> "ui inverted orange button"%>
     <%end%>
   </div>
   </div>
