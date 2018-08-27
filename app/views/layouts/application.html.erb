@@ -30,11 +30,18 @@
 
   Students <i class="users icon"></i>
 </a>
+<br>
+
+<%= link_to('Logout', destroy_user_session_path, method: :delete, :class => "ui inverted orange button" ) %>
+
+
+
 </div>
 <div class="pusher">
 <div class="ui top fixed menu"><p>New York Code + Design Academy Dashboard</p></div>
-
 </div>
+  <p class="notice"><%= notice%></p>
+  <p class-"alert"><%= alert%></p>
     <%= yield %>
   </body>
 </html>

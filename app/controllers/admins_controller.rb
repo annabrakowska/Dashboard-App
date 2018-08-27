@@ -1,6 +1,9 @@
 class AdminsController < ApplicationController
 
     def index
+        puts current_user.email
+        puts "Hello Blah"
+
         @cohorts = Cohort.all 
         @courses = Course.all
         @teachers = Teacher.all
