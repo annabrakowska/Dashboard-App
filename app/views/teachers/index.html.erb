@@ -1,0 +1,40 @@
+<table class="ui compact celled definition table">
+  <thead class="full-width">
+    <tr>
+    <th>Raise</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>Education</th>
+    <th>E-mail address</th> 
+    </tr>
+  </thead>
+  <tbody>
+  <% @teachers.each do |teacher| %> 
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox"> 
+          <input type="checkbox"><label></label>
+        </div>
+      </td>
+      <td><%=link_to teacher.first_name + " " +teacher.last_name, teacher_path(teacher)%></td>
+      <td><%=teacher.age%></td>
+      <td>$<%=teacher.salary%></td>
+      <td><%=teacher.education%></td>
+      <td><%=teacher.email%></td>
+    </tr>
+    <% end%>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th></th>
+      <th colspan="5">
+      
+        <%=link_to "Add Teachers", new_teacher_path(@teacher), :class=> "ui inverted orange button"%>
+         
+      </th>
+    </tr>
+  </tfoot>
+</table>
+
+

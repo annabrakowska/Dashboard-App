@@ -1,0 +1,35 @@
+<table class="ui compact celled definition table">
+  <thead class="full-width">
+    <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @courses.each do |course| %> 
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox"> 
+          <input type="checkbox"><label></label>
+        </div>
+      </td>
+      <td><%=link_to course.name, course_path(course)%></td>
+      <td><%=course.hours.to_s%></td>
+    </tr>
+    <% end%>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th></th>
+      <th colspan="5">
+          <%=link_to "Add course", new_course_path(@course), :class=> "ui inverted orange button"%>
+        </div>  
+      </th>
+    </tr>
+  </tfoot>
+</table>
+
+
+
+

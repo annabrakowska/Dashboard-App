@@ -1,0 +1,33 @@
+<div class="ui three column centered grid">
+  <form class="ui form">
+    <div class="field">
+    <div class="ui top attached label">Student Information</div>
+    <br><br>
+    <%= form_for @student do |form| %>
+    <%= form.text_field :first_name, value:"First name: "+ @student.first_name %>
+    </div>
+    <div class="field">
+    <%= form.text_field :last_name, value:"Last name: " + @student.last_name %>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :age, value:"Age: " + @student.age.to_s %>
+    </div>
+      
+    <div class="field">
+    <%= form.text_field :email, value:"Email: " + @student.email%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :password, value:"Password: " + @student.password%>
+    </div>
+
+    <div class="field">
+    <%= form.text_field :cohort_id, value:"Cohort ID: " + @student.cohort_id.to_s%>
+    </div>
+    <%=link_to "Edit", edit_student_path(@student), :class=> "ui inverted orange button"%>
+    
+    <%end%>
+  </div>
+  </div>
+</div>
