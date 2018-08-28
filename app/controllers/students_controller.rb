@@ -11,9 +11,16 @@ class StudentsController < ApplicationController
 
 
     def create
-        @student = Student.create(student_params);
-        redirect_to new_student_path
+
+        @student = Student.new(student_params)
+        if @student.save
+          redirect_to @student
+        else
+          render "new"
+        end
     end
+
+
 
     def show
         @student = Student.find(params[:id]) 

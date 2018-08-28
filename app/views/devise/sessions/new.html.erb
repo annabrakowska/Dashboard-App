@@ -1,7 +1,7 @@
 <div class="ui three column centered grid">
-    <div class="ui form">
-    <div class="field">
-    <div class="ui top attached label">Sign in</div>
+  <div class="ui form">
+    <div class="ui top attached label">Login To Dashboard</div>
+
     <br><br>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -23,12 +23,17 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in", :class=> "ui inverted orange button" %>
+
+    <%= f.submit "Log in", :class=>"ui inverted orange button" %>
+
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
+
+

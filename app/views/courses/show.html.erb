@@ -11,13 +11,11 @@
     <div class="field">
     <%= form.text_field :hours, value:"Hours: " + @course.hours.to_s %>
     </div>
-    <%=link_to "Edit", edit_course_path(@course), :class=> "ui inverted orange button"%>
+    <%=link_to "Edit", edit_course_path(@course), :class=> "ui inverted orange button", data: { turbolinks: false }%>
     <%end%>
   </div>
   </div>
 </div>
-
-
 
 
 

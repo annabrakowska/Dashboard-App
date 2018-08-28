@@ -9,8 +9,12 @@ class CohortsController < ApplicationController
     end
 
     def create
-        @cohort = Cohort.create(cohort_params)
-        redirect_to new_cohort_path
+        @cohort = Cohort.new(cohort_params)
+        if @cohort.save
+          redirect_to @cohort
+        else
+          render "new"
+        end
     end
 
     def show

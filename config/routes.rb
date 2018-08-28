@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  devise_scope :user do
-    authenticated :user do
+  
+  devise_scope :admin do
+    authenticated :admin do
+
       root 'admins#index', as: :authenticated_root
     end
   
@@ -11,6 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
+
 resources :students
 resources :teachers
 resources :cohorts
@@ -18,4 +22,9 @@ resources :courses
 resources :admins
 
 end
+
+
+
+
+
 
