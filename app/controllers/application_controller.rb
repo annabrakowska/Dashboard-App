@@ -1,5 +1,4 @@
-class ApplicationController < ActionController::Base
-    
+class ApplicationController < ActionController::Base    
     layout :layout_by_resource
 
   private
@@ -11,5 +10,4 @@ class ApplicationController < ActionController::Base
       "application"
     end
   end
-
 end

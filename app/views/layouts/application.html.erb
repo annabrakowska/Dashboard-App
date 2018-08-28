@@ -29,8 +29,10 @@
 <a href="/students" class="item">
   Students <i class="users icon"></i>
 </a>
+
 <br><br>
 <%= link_to "Log out", destroy_session_path(:admin ), :class=>"ui inverted orange button", :method => :delete %>
+
 
 </div>
 
@@ -38,10 +40,11 @@
 
 <div class="pusher">
 <div class="ui top fixed menu"><p>New York Code + Design Academy Dashboard</p></div>
-
 </div>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>
