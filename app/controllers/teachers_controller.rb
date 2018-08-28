@@ -10,9 +10,16 @@ class TeachersController < ApplicationController
 
 
     def create
-        @teacher = Teacher.create(teacher_params);
-        redirect_to new_teacher_path
+
+        @teacher = Teacher.new(teacher_params)
+        if @teacher.save
+          redirect_to @teacher
+        else
+          render "new"
+        end
     end
+
+
 
     def show
         @teacher = Teacher.find(params[:id]) 

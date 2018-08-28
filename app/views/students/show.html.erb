@@ -25,7 +25,7 @@
     <div class="field">
     <%= form.text_field :cohort_id, value:"Cohort ID: " + @student.cohort_id.to_s%>
     </div>
-    <%=link_to "Edit", edit_student_path(@student), :class=> "ui inverted orange button"%>
+    <%=link_to "Edit", edit_student_path(@student), :class=> "ui inverted orange button", data: { turbolinks: false }%>
     
     <%end%>
   </div>

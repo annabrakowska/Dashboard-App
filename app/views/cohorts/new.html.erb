@@ -1,5 +1,5 @@
 <div class="ui three column centered grid">
-  <form class="ui form">
+  <div class="ui form">
   <div class="ui top attached label">New Cohort Form</div>
   <br><br>
     <div class="field">
@@ -26,7 +26,10 @@
     <%= form.text_field :teacher_id, placeholder: "Teacher ID"%>
     </div>
 
-    <%= form.submit class:"ui inverted button" %>
+    <div class="field">
+    <%= form.submit "Create Cohort",  class:"ui inverted orange button" %>  
+    </div>
+
   <% end %>
     </div>
   </div>

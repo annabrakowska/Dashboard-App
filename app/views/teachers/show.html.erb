@@ -29,7 +29,7 @@
     <div class="field">
     <%= form.text_field :password, value:"Password: " + @teacher.password%>
     </div>
-    <%=link_to "Edit", edit_teacher_path(@teacher), :class=> "ui inverted orange button"%>
+    <%=link_to "Edit", edit_teacher_path(@teacher), :class=> "ui inverted orange button", data: { turbolinks: false }%>
     <%end%>
   </div>
   </div>
