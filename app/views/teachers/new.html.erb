@@ -40,9 +40,7 @@ setTimeout("$('#alert').fadeOut(4000)",100);
     <div class="field">
     <%= form.file_field :profile_picture %>
     </div>
-    <div class="field">
-    <%= form.file_field :uploads, multiple: true %>
-    </div>
+   
   
     <%= form.submit "Create Teacher",  class:"ui inverted orange button" %>
     <%= link_to  "Go back", teachers_path(@teachers),  class:"ui inverted orange button" %>
