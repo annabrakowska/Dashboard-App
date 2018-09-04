@@ -1,21 +1,26 @@
 <div class="ui three column centered grid">
   <div class="ui form">
-  <div class="ui top attached label">New Cohort Form</div>
-  <br><br>
     <div class="field">
+    <div class="ui top attached label">New Cohort Information</div>
+    <br><br>
       <%= form_with model: Cohort.new do |form| %>
     </div>
     
     <div class="field">
-    <%= form.text_field :name, placeholder: "Name"%>
+      <%= form.text_field :name, placeholder: "Name"%>
+    </div>
+    
+    <div class="field">
+      <%= form.text_field :hours, placeholder: "Hours"%>
     </div>
 
     <div class="field">
-    <%= form.text_field :start_date, placeholder: "Start Date"%>
+    <%= form.date_field :start_date, placeholder: "Start Date"%>
     </div>
 
+
     <div class="field">
-    <%= form.text_field :end_date, placeholder: "End Date"%>
+    <%= form.date_field :end_date, placeholder: "End Date"%>
     </div>
 
     <div class="field">
@@ -25,12 +30,12 @@
     <div class="field">
     <%= form.text_field :teacher_id, placeholder: "Teacher ID"%>
     </div>
-
+    
     <div class="field">
-    <%= form.submit "Create Cohort",  class:"ui inverted orange button" %>  
-    </div>
-
-  <% end %>
+    <%= form.submit "Create Cohort",  class:"ui inverted orange button" %>
+    <%= link_to  "Go back", cohorts_path(@cohorts),  class:"ui inverted orange button" %>
+    </div>  
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,38 +1,40 @@
-<table class="ui compact celled definition table">
-  <thead class="full-width">
+<table class="ui selectable celled table">
+  <thead>
     <tr>
-    <th></th>
+    <th>#</th>
     <th>Name</th>
     <th>Age</th>
     <th>Email</th>
     <th>Password</th>
     <th>Cohort ID</th>
+    <th>Delete</th>
     </tr>
   </thead>
   <tbody>
-  <% @students.each do |student| %> 
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox"> 
-          <input type="checkbox"><label></label>
-        </div>
-      </td>
+  
+  <% @students.each_with_index do |student, index| %> 
+    <tr id="student-<%= student.id %>">
+      <td><%=index+1%></td>
       <td><%=link_to student.first_name + " " +student.last_name, student_path(student)%></td>
       <td><%=student.age%></td>
       <td><%=student.email%></td>
       <td><%=student.password%></td>
       <td><%=student.cohort_id%></td>
+
+      <td> 
+      <%= link_to 'Destroy', student_path(student), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %>
+      </td>
+
     </tr>
     <% end%>
-  </tbody>
-  <tfoot class="full-width">
+
+    <tfoot class="full-width">
     <tr>
       <th></th>
-      <th colspan="5">
-          <%=link_to "Add Student", new_student_path(@student), :class=> "ui inverted orange button"%>
-        </div>  
+      <th colspan="6">
+          <%=link_to "Add Student", new_student_path(@student), :class=> "ui inverted orange button", data: { turbolinks: false }%>
       </th>
     </tr>
   </tfoot>
 </table>
-
+  </tbody>

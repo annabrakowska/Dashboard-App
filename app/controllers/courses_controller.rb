@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-    
+
     def index
         @courses = Course.all
     end
@@ -11,9 +11,10 @@ class CoursesController < ApplicationController
     def create
         @course = Course.new(course_params)
         if @course.save
-          redirect_to @course
+            flash[:notice] = "Course successfully created"
+            redirect_to @course
         else
-          render "new"
+            redirect_to "courses/new"
         end
     end
 
@@ -33,7 +34,8 @@ class CoursesController < ApplicationController
     end
 
     def destroy
-    
+        @course = Course.find(params[:id])
+        @course.destroy
     end
 
     def course_params

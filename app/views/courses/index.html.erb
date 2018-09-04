@@ -1,29 +1,29 @@
-<table class="ui compact celled definition table">
+<table class="ui selectable celled table">
   <thead class="full-width">
     <tr>
-    <th></th>
+    <th>#</th>
     <th>Name</th>
     <th>Hours</th>
+    <th>Delete</th>
     </tr>
   </thead>
   <tbody>
-  <% @courses.each do |course| %> 
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox"> 
-          <input type="checkbox"><label></label>
-        </div>
-      </td>
+  <% @courses.each_with_index do |course, index| %>
+    <tr id="course-<%= course.id %>"> 
+      <td><%=index+1%></td>
       <td><%=link_to course.name, course_path(course)%></td>
       <td><%=course.hours.to_s%></td>
+      <td> <%= link_to 'Destroy', course_path(course), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %>
+      </td>
     </tr>
     <% end%>
   </tbody>
   <tfoot class="full-width">
     <tr>
       <th></th>
-      <th colspan="5">
-          <%=link_to "Add course", new_course_path(@course), :class=> "ui inverted orange button"%>
+      <th colspan="6">
+          <%=link_to "Add course", new_course_path(@course), :class=> "ui inverted orange button", data: { turbolinks: false }%>
+          
         </div>  
       </th>
     </tr>

@@ -1,5 +1,5 @@
 <div class="ui three column centered grid">
-  <div class="ui form">
+  <div class="ui form" style="position:relative; top:100px" >
     <div class="ui top attached label">Login To Dashboard</div>
     <br><br>
 
@@ -23,7 +23,6 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-
   <div class="actions">
     <%= f.submit "Sign up", :class=>"ui inverted orange button" %>
   </div>

@@ -1,4 +1,6 @@
 class TeachersController < ApplicationController
+    
+
     def index
         @teachers = Teacher.all
     end
@@ -12,13 +14,14 @@ class TeachersController < ApplicationController
     def create
 
         @teacher = Teacher.new(teacher_params)
-        if @teacher.save
-          redirect_to @teacher
-        else
-          render "new"
-        end
-    end
+            if @teacher.save
+                flash[:notice] = "Teacher successfully created"
+                redirect_to @teacher
+            else
+                redirect_to "teachers/new"
+            end
 
+    end
 
 
     def show
@@ -37,10 +40,13 @@ class TeachersController < ApplicationController
     end
 
     def destroy
+        @teacher = Teacher.find(params[:id])
+        @teacher.destroy
     end
 
     def teacher_params
-        params.require(:teacher).permit(:first_name, :last_name, :age, :salary, :education, :email, :password)
+        params.require(:teacher).permit(:first_name, :last_name, :age, :salary, :education, :email, :password, :profile_picture, uploads: [])
+
     end
     
 end

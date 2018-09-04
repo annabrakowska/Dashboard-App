@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
     <%= stylesheet_link_tag "session" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="/assets/jquery.js" type="text/javascript"></script>
+    <script src="/assets/jquery_ujs.js" type="text/javascript"></script>
   </head>
 
   <body>
+
+  <script>
+  setTimeout("$('.message').fadeOut('slow')", 2000)
+  </script>
     <%= yield %>
   </body>
 </html>

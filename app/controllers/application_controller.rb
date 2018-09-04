@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-    
+  before_action :authenticate_admin!, only: [:index]  
+
     layout :layout_by_resource
 
   private

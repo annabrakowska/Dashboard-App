@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+   
 
     def index
         @students = Student.all
@@ -11,15 +12,15 @@ class StudentsController < ApplicationController
 
 
     def create
-
         @student = Student.new(student_params)
         if @student.save
-          redirect_to @student
+            flash[:notice] = "Student successfully created"
+            redirect_to @student
         else
-          render "new"
+            redirect_to "students/new"
         end
-    end
 
+    end
 
 
     def show
@@ -39,6 +40,8 @@ class StudentsController < ApplicationController
 
 
     def destroy
+        @student = Students.find(params[:id])
+        @student.destroy
     end
 
     def student_params

@@ -1,8 +1,18 @@
+<script>
+$('.message').fadeOut(0);
+setTimeout("$( '#message' ).fadeOut(4000)",100)
+</script>
+
 <div class="ui three column centered grid">
   <form class="ui form">
     <div class="field">
 
     <div class="ui top attached label">Course Information</div>
+    
+    <% if flash[:notice] %>
+    <div id="message"><%= notice%></div>
+    <%end%>
+
     <br><br>
    
     <%= form_for @course do |form| %>
@@ -12,6 +22,7 @@
     <%= form.text_field :hours, value:"Hours: " + @course.hours.to_s %>
     </div>
     <%=link_to "Edit", edit_course_path(@course), :class=> "ui inverted orange button", data: { turbolinks: false }%>
+    <%= link_to  "Complete", courses_path(@courses),  class:"ui inverted orange button" %>
     <%end%>
   </div>
   </div>
