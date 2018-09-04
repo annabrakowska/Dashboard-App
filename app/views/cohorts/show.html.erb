@@ -57,12 +57,12 @@ setTimeout("$( '#message' ).fadeOut(4000)",100)
         <td>
             <div class="content">
             <%=link_to student.first_name, student_path(student)%>
-            <td><%=student.id%></td>
+            <td><%=student.last_name%></td>
             </div>
           </div>
         </h4></td>
         <td>
-        <%=student.last_name%>
+        <%=student.id%>
         </td>
       </tr>
       <%end%>
