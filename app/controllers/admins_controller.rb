@@ -1,22 +1,21 @@
 class AdminsController < ApplicationController
-
+    
     def index
-        puts current_user.email
-        puts "Hello Blah"
+       
 
         @cohorts = Cohort.all 
         @courses = Course.all
         @teachers = Teacher.all
         @students = Student.all
 
-        @courses_img = "https://cdn4.iconfinder.com/data/icons/online-education-9/500/online-education-study_15-512.png"
-        @cohorts_img = "https://higherlogicdownload.s3.amazonaws.com/AISAP/9240e0fb-b3b1-451a-85f4-ae549c79acf1/UploadedImages/Icons/cohort-groups-2016.png"
-        @students_img = "https://cdn3.iconfinder.com/data/icons/education-3-2/256/Students-512.png"
-        @teachers_img = "https://cdn3.iconfinder.com/data/icons/public-sign-part02/100/__-57-512.png"
+        @courses_img = "https://rensderooij.nl/wp-content/uploads/2017/12/Groen-schoolplein-Hoveniersbedrijf-Rens-de-Rooij-Draagt-bij-aan-de-ontwikkeling-van-het-kind.png"
+        @cohorts_img = "https://image.flaticon.com/icons/png/512/446/446804.png"
+        @students_img = "http://icons.iconarchive.com/icons/webalys/kameleon.pics/256/Student-3-icon.png"
+        @teachers_img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlr-Vit8kyBt5IMebWgUe6myqHyo-eBgVYzcjBezJdlOJIY9nX"
 
-        @sections = [@cohorts, @courses, @teachers, @students]
+        @sections = ["cohorts", "courses", "teachers", "students"]
         @images = [@cohorts_img, @courses_img, @teachers_img, @students_img]
-
+        
 
     end
 

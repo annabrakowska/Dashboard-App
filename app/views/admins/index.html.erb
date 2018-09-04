@@ -1,25 +1,17 @@
-<div class="ui divided items">
+<div id="wrapper">
+<div class="ui six column grid">
 <% @sections.each_with_index do |section, index| %>
-  <div class="item">
-    <div class="image">
-      <img src="<%= @images[index]%>">
-    </div>
-    <div class="content">
-      <a class="header"><%= section.name%></a>
-      <div class="meta">
-        <span class="cinema">Union Square 14</span>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="<%=@images[index]%>">
       </div>
-      <div class="description">
-        <p></p>
-      </div>
-      <div class="extra">
-        
-      <button class="ui right labeled icon orange inverted button">
-      <i class="right arrow icon"></i>
-      More information
-    </button>
+      <div class="content">
+        <a href = "/<%=section%>" class="header"><%= section.capitalize%></a>
       </div>
     </div>
   </div>
+  
   <%end%>
+</div>
 </div>

@@ -2,7 +2,7 @@
   <div class="ui form">
     <div class="field">
     <div class="ui top attached label">New Student Information</div>
-    <br>br>
+    <br><br>
       <%= form_with model: Student.new do |form| %>
     </div>
     <div class="field">
@@ -23,8 +23,11 @@
     <div class="field">
       <%= form.text_field :cohort_id, placeholder: "Cohort ID"%>
     </div>
-      <%= form.submit class: "ui inverted button"%>
-      <% end %>
+
+    <%= form.submit "Create Student",  class:"ui inverted orange button" %>
+    
+    <% end %>
+    <%= link_to  "Go back", students_path(@students),  class:"ui inverted orange button" %>
     <div>
   </div>
   </div>

@@ -15,7 +15,8 @@
     </div>
     
     <div class="field">
-      <%= form.submit :class=> "ui inverted orange button"%>
+    <%= form.submit "Create Course",  class:"ui inverted orange button" %>
+    <%= link_to  "Go back", courses_path(@courses),  class:"ui inverted orange button" %>
     </div>  
       <% end %>
     </div>
