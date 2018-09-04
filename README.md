@@ -1,24 +1,15 @@
-# README
+# Admin Panel Fullstack Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Admin panel project 
 
-Things you may want to cover:
+Technologies:
+* Ruby on Rails
+* Javascript
+* HTML, CSS/SASS
+* Semantic UI
 
-* Ruby version
+Features:
+* enables admin to create a new account, and log in
+* enables admin to create, display, edit and remove students, teachers, courses and cohorts
+* deletion enabled via an ajax call 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
