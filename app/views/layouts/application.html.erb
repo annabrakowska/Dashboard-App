@@ -50,18 +50,21 @@
 <a href="/students" class="item">
   Students <i class="users icon"></i>
 </a>
+
 <br><br>
 <div style="display:flex; justify-content:center">
 <%= link_to "Log out", destroy_session_path(:admin ), :class=>"ui inverted orange button", :method => :delete %>
 </div>
+
 </div>
 
 
 
 <div class="pusher">
 
+
 </div>
-  
+ 
     <%= yield %>
   </body>
 </html>
