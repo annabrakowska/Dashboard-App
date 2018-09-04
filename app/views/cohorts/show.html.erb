@@ -31,7 +31,7 @@ setTimeout("$( '#message' ).fadeOut(4000)",100)
     <%= form.text_field :teacher_id, value:"Teacher ID: " + @cohort.teacher_id.to_s %>
     </div>
     <%=link_to "Edit", edit_cohort_path(@cohort), :class=> "ui inverted orange button", data: { turbolinks: false }%>
-    <%= link_to  "Go back", cohorts_path(@cohorts),  class:"ui inverted orange button" %>
+    <%= link_to  "Cohorts", cohorts_path(@cohorts),  class:"ui inverted orange button" %>
     <%end%>
   </div>
   </div>
