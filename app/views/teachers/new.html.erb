@@ -1,6 +1,11 @@
+<script>
+setTimeout("$('#alert').fadeOut(4000)",100);
+</script>
+
 <div class="ui three column centered grid">
   <div class="ui form">
   <div class="ui top attached label">New Teacher Form</div>
+  <div id="alert"><%=alert=></div>
   <br><br><br>
     <div class="field">
       <%= form_with model: Teacher.new do |form| %>
@@ -30,8 +35,17 @@
     <div class="field">
     <%= form.text_field :password, placeholder: "Password"%>
     </div>
+     
 
-    <%= form.submit class: "ui inverted orange button"%>
+    <div class="field">
+    <%= form.file_field :profile_picture %>
+    </div>
+    <div class="field">
+    <%= form.file_field :uploads, multiple: true %>
+    </div>
+  
+    <%= form.submit "Create Teacher",  class:"ui inverted orange button" %>
+    <%= link_to  "Go back", teachers_path(@teachers),  class:"ui inverted orange button" %>
   <% end %>
   </div>
   </div>

@@ -1,1 +1,17 @@
-<h1>This is main page</h1>
+<div id="wrapper">
+<div class="ui six column grid">
+<% @sections.each_with_index do |section, index| %>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="<%=@images[index]%>">
+      </div>
+      <div class="content">
+        <a href = "/<%=section%>" class="header"><%= section.capitalize%></a>
+      </div>
+    </div>
+  </div>
+  
+  <%end%>
+</div>
+</div>

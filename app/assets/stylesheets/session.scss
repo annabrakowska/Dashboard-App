@@ -15,12 +15,13 @@ body {
 .ui.form {
   background: rgb(255, 255, 255);
   position: relative;
-  top: 190px;
+  top: 20px;
   padding: 3.5vh;
   width: 50%;
   border-radius: 5%;
   box-shadow: 1px 1px 2px 1px rgba(97, 96, 96, 0.178);
 }
+
 .ui.menu {
   visibility: visible;
   background: #09093b;
@@ -28,10 +29,10 @@ body {
 
 .ui.table {
   position: relative;
-  top: 15vh;
+  top: -2%;
   left: 15rem;
   margin: 0;
-  width: 90rem;
+  width: 90%;
 }
 
 .ui.top.attached {
@@ -50,5 +51,106 @@ body {
     margin-top: 3.7%;
     text-shadow: 1px 2.3px gray;
     font-size: 260%;
+  }
+}
+
+#students {
+  margin-left: 26%;
+}
+
+#logo {
+  display: none;
+}
+
+#wrapper {
+  position: relative;
+  left: 23%;
+  top: 20%;
+}
+#message {
+  background: lightgreen;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  font-size: 120%;
+}
+
+#alert {
+  background: red;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  font-size: 120%;
+}
+#cohorts {
+  margin-left: 25%;
+  margin-top: 5%;
+}
+@media only screen and (max-width: 1144px) {
+  .ui.sidebar.inverted.vertical.menu {
+    margin-left: 0em;
+    margin-right: 0em;
+    width: 25%;
+    max-width: none;
+  }
+  .ui.medium.circular.image {
+    display: none;
+  }
+
+  .ui.selectable.celled.table {
+    top: -3%;
+    left: 25%;
+    width: 75%;
+  }
+
+  .ui.top.fixed.menu {
+    display: none;
+    p {
+      display: none;
+    }
+  }
+  #logo {
+    display: block;
+    width: 40%;
+    left: 30%;
+    position: relative;
+    margin-top: 10%;
+  }
+  label {
+    padding-top: 12%;
+  }
+  .ui.form {
+    background: rgb(255, 255, 255);
+    position: relative;
+    top: 20px;
+    left: 12%;
+    padding: 3.5vh;
+    width: 60%;
+    border-radius: 5%;
+    box-shadow: 1px 1px 2px 1px rgba(97, 96, 96, 0.178);
+  }
+  .ui.six.column.grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .ui.fluid.card {
+    width: 350%;
+    position: relative;
+    left: 120%;
+    text-align: center;
+  }
+  #wrapper {
+    position: relative;
+    left: 23%;
+    top: 8%;
+  }
+
+  #students {
+    margin-left: 47%;
+  }
+
+  #cohorts {
+    margin-left: 0%;
+    margin-top: 12%;
   }
 }

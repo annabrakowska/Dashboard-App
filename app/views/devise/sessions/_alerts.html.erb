@@ -1,0 +1,9 @@
+<% flash.each do |key, value| %>
+    <div class="message" style="position:absolute; width:100%; margin-top:1%;">
+       <div style="background:#98FB98" class="alert-message <%= key %>">
+        <a class="close" href="#"><i class="window close outline red icon"></i></a>
+        <center><h1 style="color:white"><%= value %></h1></center>
+        <br>
+      </div>
+    </div>
+<% end %>

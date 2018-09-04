@@ -1,40 +1,53 @@
-<table class="ui compact celled definition table">
-  <thead class="full-width">
+<script>
+setTimeout("$('#alert').fadeOut(4000)",100);
+</script>
+
+
+<table class="ui selectable celled table">
+  <thead>
     <tr>
-    <th>Raise</th>
+    <th>#</th>
+    <th>Image</th>
     <th>Name</th>
     <th>Age</th>
     <th>Salary</th>
     <th>Education</th>
-    <th>E-mail address</th> 
+    <th>Email</th>
+    <th>Password</th>
+    <th>Delete</th>
     </tr>
   </thead>
   <tbody>
-  <% @teachers.each do |teacher| %> 
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox"> 
-          <input type="checkbox"><label></label>
-        </div>
-      </td>
+  
+  <% @teachers.each_with_index do |teacher, index| %> 
+    <tr id="teacher-<%= teacher.id %>">
+      <td class= "column"><%=index+1%></td>
+      <td class="one wide column"><%= image_tag teacher.profile_picture, class: "ui tiny circular image" %></td>
       <td><%=link_to teacher.first_name + " " +teacher.last_name, teacher_path(teacher)%></td>
-      <td><%=teacher.age%></td>
-      <td>$<%=teacher.salary%></td>
-      <td><%=teacher.education%></td>
+      <td class="one wide column"><%=teacher.age%></td>
+      <td class="one wide column"><%=teacher.salary%></td>
+      <td class="one wide column"><%=teacher.education%></td>
       <td><%=teacher.email%></td>
+      <td class="one wide column"><%=teacher.password%></td>
+      <td> 
+      <%= link_to 'Remove', teacher_path(teacher), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %>
+      </td>
+
     </tr>
     <% end%>
-  </tbody>
-  <tfoot class="full-width">
+
+    <tfoot class="full-width">
     <tr>
       <th></th>
-      <th colspan="5">
-      
-        <%=link_to "Add Teachers", new_teacher_path(@teacher), :class=> "ui inverted orange button"%>
-         
+      <th colspan="8">
+          <%=link_to "Add teacher", new_teacher_path(@teacher), :class=> "ui inverted orange button", data: { turbolinks: false }%>
       </th>
     </tr>
   </tfoot>
 </table>
+  </tbody>
 
 
+
+
+  
