@@ -1,5 +1,12 @@
 # Admin Panel Fullstack Application
+
 LINK TO THE PROJECT: https://infinite-springs-71263.herokuapp.com/
+
+![Alt text](/pic1.png)
+![Alt text](/pic2.png)
+![Alt text](/pic3.png)
+![Alt text](/pic4.png)
+
 
 Technologies:
 * Ruby on Rails
