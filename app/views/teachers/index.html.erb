@@ -9,7 +9,6 @@ setTimeout("$('#alert').fadeOut(4000)",100);
   <thead>
     <tr>
     <th>#</th>
-    <th>Image</th>
     <th>Name</th>
     <th>Age</th>
     <th>Salary</th>
@@ -24,7 +23,6 @@ setTimeout("$('#alert').fadeOut(4000)",100);
   <% @teachers.each_with_index do |teacher, index| %> 
     <tr id="teacher-<%= teacher.id %>">
       <td class= "column"><%=index+1%></td>
-      <td class="one wide column"><%= image_tag teacher.profile_picture, class: "ui tiny circular image" %></td>
       <td><%=link_to teacher.first_name + " " +teacher.last_name, teacher_path(teacher)%></td>
       <td class="one wide column"><%=teacher.age%></td>
       <td class="one wide column"><%=teacher.salary%></td>
