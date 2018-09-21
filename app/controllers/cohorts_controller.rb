@@ -7,10 +7,25 @@ class CohortsController < ApplicationController
 
     def new 
         @course = Cohort.new
+        @courses = Course.all
+        @courses_names  = []
+
+        @courses.each do |name|
+            @courses_names.push(name.name)
+        end
+
+        @teachers = Teacher.all
+        @teachers_id = []
+
+        @teachers.each do |id|
+            @teachers_id.push(id.id)
+        end
+
     end
 
     def create
         @cohort = Cohort.new(cohort_params)
+   
         
         if @cohort.save
             flash[:notice] = "Cohort successfully created"

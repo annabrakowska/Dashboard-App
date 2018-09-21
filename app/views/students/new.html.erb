@@ -21,7 +21,8 @@
       <%= form.text_field :password, placeholder: "Password"%>
     </div>
     <div class="field">
-      <%= form.text_field :cohort_id, placeholder: "Cohort ID"%>
+        <p>Select Cohort Id</p>
+      <%= form.select :cohort_id, (@cohort_id)%>
     </div>
 
     <%= form.submit "Create Student",  class:"ui inverted orange button" %>

@@ -24,11 +24,13 @@
     </div>
 
     <div class="field">
-    <%= form.text_field :course_id, placeholder: "Course ID"%>
+    <p>Select Course's Name</p>
+    <%= form.select :course_name, (@courses_names)%>
     </div>
 
     <div class="field">
-    <%= form.text_field :teacher_id, placeholder: "Teacher ID"%>
+    <p>Select Teacher's ID</p>
+    <%= form.select :teacher_id, (@teachers_id)%>
     </div>
     
     <div class="field">

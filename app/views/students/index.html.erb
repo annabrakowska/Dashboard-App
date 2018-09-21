@@ -1,3 +1,5 @@
+<h1 style="margin-left:50%">STUDENTS</h1>
+<br />
 <table class="ui selectable celled table">
   <thead>
     <tr>
@@ -22,7 +24,7 @@
       <td><%=student.cohort_id%></td>
 
       <td> 
-      <%= link_to 'Destroy', student_path(student), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Remove', student_path(student), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %>
       </td>
 
     </tr>

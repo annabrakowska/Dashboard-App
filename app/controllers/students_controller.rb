@@ -8,6 +8,12 @@ class StudentsController < ApplicationController
 
     def new
         @student=Student.new
+        @cohort_id = []
+        @cohorts = Cohort.all
+
+        @cohorts.each do |id|
+            @cohort_id.push(id.id)
+        end
     end
 
 
